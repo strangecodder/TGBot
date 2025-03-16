@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: botservice
+  datasource:
+    url: jdbc:postgresql///localhost:5432/backenddb
+    username: user
+    password: password
+  server:
+    port: 8081
+
+
+  telegram:
+    token: 7940276562:AAEVnwlS_xEhNEnFZHt04c_b2-vkYu8bFig
+    name: BotTesting
