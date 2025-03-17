@@ -4,11 +4,11 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
-@Controller("/api")
+@Controller("/api/chats")
 @Slf4j
 public class ChatController {
 
-    @GetMapping("/chats")
+    @GetMapping("/")
     public String getAllChats(){
         return "AllChats";
     }
