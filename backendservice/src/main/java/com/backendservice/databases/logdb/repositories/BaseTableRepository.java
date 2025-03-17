@@ -1,6 +1,6 @@
-package com.backendservice.databases.LogDB.Repositories;
+package com.backendservice.databases.logdb.repositories;
 
-import com.backendservice.databases.LogDB.Entities.BaseTable;
+import com.backendservice.databases.logdb.entities.BaseTable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

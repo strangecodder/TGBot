@@ -1,4 +1,4 @@
-package com.backendservice.databases.BackendDB.Entities;
+package com.backendservice.databases.backenddb.entities;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -18,8 +18,8 @@ public class Chat {
     @Column(name = "chat_name")
     private String chat_name;
 
-    @Column(name = "chat_link")
-    private String chat_link;
+    @Column(name = "link")
+    private String link;
 
     @OneToOne
     @JoinColumn(name = "department_id",referencedColumnName = "id")

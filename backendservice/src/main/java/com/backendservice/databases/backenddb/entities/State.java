@@ -1,21 +1,20 @@
-package com.backendservice.databases.BackendDB.Entities;
+package com.backendservice.databases.backenddb.entities;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name = "role")
+@Table(name = "state")
 @AllArgsConstructor
 @NoArgsConstructor
-public class Role {
+public class State {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(columnDefinition = "serial")
     private int id;
 
-    @Column(name = "role_name")
-    private String role_name;
-
+    @Column(name = "value")
+    private String value;
 }

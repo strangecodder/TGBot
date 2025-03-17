@@ -1,4 +1,4 @@
-package com.backendservice.databases.BackendDB.Entities;
+package com.backendservice.databases.backenddb.entities;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -15,8 +15,8 @@ public class User {
     @Column(columnDefinition = "serial")
     private int id;
 
-    @Column(name = "Tg_id")
-    private int Tg_id;
+    @Column(name = "tg_id")
+    private long tg_id;
 
     @Column(name = "email")
     private String email;

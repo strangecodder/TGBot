@@ -1,14 +1,14 @@
-package com.backendservice.databases.BackendDB.Entities;
+package com.backendservice.databases.backenddb.entities;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name = "chat_group")
+@Table(name = "user_chat")
 @AllArgsConstructor
 @NoArgsConstructor
-public class ChatGroup {
+public class UserChat {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

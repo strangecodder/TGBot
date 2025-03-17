@@ -1,26 +1,20 @@
-package com.backendservice.databases.LogDB.Entities;
+package com.backendservice.databases.logdb.entities;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name = "base_table")
+@Table(name = "tag")
 @AllArgsConstructor
 @NoArgsConstructor
-public class BaseTable {
+public class Tag {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(columnDefinition = "serial")
     private int id;
 
-    @Column(name = "tg_id")
-    private int tg_id;
-
-    @Column(name = "chat_id")
-    private int chat_id;
-
-    @Column(name = "chat_role")
-    private int chat_role;
+    @Column(name = "value")
+    private String value;
 }

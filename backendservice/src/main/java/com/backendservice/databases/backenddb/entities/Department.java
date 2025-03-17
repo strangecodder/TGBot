@@ -1,4 +1,4 @@
-package com.backendservice.databases.BackendDB.Entities;
+package com.backendservice.databases.backenddb.entities;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

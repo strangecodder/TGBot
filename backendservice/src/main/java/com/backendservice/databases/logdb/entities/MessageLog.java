@@ -1,4 +1,4 @@
-package com.backendservice.databases.LogDB.Entities;
+package com.backendservice.databases.logdb.entities;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -7,27 +7,23 @@ import lombok.NoArgsConstructor;
 import java.sql.Timestamp;
 
 @Entity
-@Table(name = "user_action")
+@Table(name = "message_log")
 @AllArgsConstructor
 @NoArgsConstructor
-public class UserAction {
+public class MessageLog {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(columnDefinition = "serial")
     private int id;
 
-    @Column(name = "value")
-    private String value;
+    @OneToOne
+    @JoinColumn(name = "base_id",referencedColumnName = "id")
+    private BaseTable base_id;
+
+    @Column(name = "message")
+    private String message;
 
     @Column(name = "time")
     private Timestamp time;
-
-    @Column(name = "type")
-    private String type;
-
-    @OneToOne
-    @JoinColumn(name = "base_id", referencedColumnName = "id")
-    private BaseTable base_id;
-
 }
