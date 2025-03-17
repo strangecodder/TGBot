@@ -3,16 +3,21 @@ spring:
     name: backendservice
   kafka:
     bootstrap-servers: 9092
-  com:
-    backendservice:
+  server:
+    port: 8080
+com:
+  backendservice:
       backenddb:
+        driver-class-name: org.postgresql.Driver
         url: jdbc:postgresql///localhost:5432/backenddb
         username: user
         password: password
-        class-driver: org.postgresql.Driver
+        #class-driver: org.postgresql.Driver
+        #driver-class-name: org.postgresql.Driver
       logdb:
+        driver-class-name: org.postgresql.Driver
         url: jdbc:postgresql///localhost:5433/logdb
         username: user
         password: password
-        class-driver: org.postgresql.Driver
+        #class-driver: org.postgresql.Driver
 
