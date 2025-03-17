@@ -1,6 +1,8 @@
 spring:
   application:
     name: botservice
+  kafka:
+    bootstrap-servers: 9092
   datasource:
     url: jdbc:postgresql///localhost:5432/backenddb
     username: user
