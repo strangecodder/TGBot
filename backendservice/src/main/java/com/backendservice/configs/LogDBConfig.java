@@ -57,14 +57,14 @@ public class LogDBConfig {
 
     @Bean(ENTITY_MANAGER_FACTORY)
     public LocalContainerEntityManagerFactoryBean appEntityManager(@Qualifier(DATA_SOURCE) DataSource dataSource){
-        final LocalContainerEntityManagerFactoryBean factoryBean = new LocalContainerEntityManagerFactoryBean();
+        LocalContainerEntityManagerFactoryBean factoryBean = new LocalContainerEntityManagerFactoryBean();
         factoryBean.setDataSource(dataSource);
         factoryBean.setPersistenceUnitName(ENTITY_MANAGER_FACTORY);
         factoryBean.setPackagesToScan(ENTITY_PACKAGE);
         factoryBean.setJpaVendorAdapter(new HibernateJpaVendorAdapter());
 
         log.info("Прошёл");
-        final HashMap<String,Object> properties = new HashMap<>();
+        HashMap<String,Object> properties = new HashMap<>();
         properties.put("javax.persistence.validation.mode", "none");
         properties.put("hibernate.hbm2ddl.auto", "update");
 
@@ -77,7 +77,7 @@ public class LogDBConfig {
             @Qualifier(ENTITY_MANAGER_FACTORY) LocalContainerEntityManagerFactoryBean entityManager,
             @Qualifier(DATA_SOURCE) DataSource dataSource
     ){
-        final JpaTransactionManager transactionManager = new JpaTransactionManager();
+        JpaTransactionManager transactionManager = new JpaTransactionManager();
         transactionManager.setEntityManagerFactory(entityManager.getObject());
         transactionManager.setDataSource(dataSource);
         return transactionManager;

@@ -5,27 +5,24 @@ import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name = "user")
+@Table(name = "employee")
 @AllArgsConstructor
 @NoArgsConstructor
-public class User {
+public class Employee {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(columnDefinition = "serial")
+    //@Column(columnDefinition = "serial")
     private int id;
 
     @Column(name = "tg_id")
     private long tg_id;
 
-    @Column(name = "email")
-    private String email;
+    @Column(name = "firstname")
+    private String firstname;
 
-    @Column(name = "first_name")
-    private String first_name;
-
-    @Column(name = "last_name")
-    private String last_name;
+    @Column(name = "lastname")
+    private String lastname;
 
     @OneToOne
     @JoinColumn(name = "department_id",referencedColumnName = "id")
@@ -34,4 +31,7 @@ public class User {
     @OneToOne
     @JoinColumn(name = "state_id",referencedColumnName = "id")
     private State state_id;
+
+    @Column(name = "email")
+    private String email;
 }

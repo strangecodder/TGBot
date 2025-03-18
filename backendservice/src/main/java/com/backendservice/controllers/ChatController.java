@@ -8,23 +8,4 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Slf4j
 public class ChatController {
 
-    @GetMapping("/")
-    public String getAllChats(){
-        return "AllChats";
-    }
-
-    @GetMapping("/chat?=")
-    public String getChat(){
-        return "Chat";
-    }
-
-    @GetMapping("/chat?=/messageslog")
-    public String getMessages(){
-        return "Messages";
-    }
-
-    @GetMapping("/chats?=/users")
-    public String getAllUsers(){
-        return "Users";
-    }
 }

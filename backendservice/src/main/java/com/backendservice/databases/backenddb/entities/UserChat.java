@@ -12,19 +12,19 @@ public class UserChat {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(columnDefinition = "serial")
+    //@Column(columnDefinition = "serial")
     private int id;
 
     @ManyToOne
     @JoinColumn(name = "user_id",referencedColumnName = "id")
-    private User user_id;
+    private Employee employee_id;
 
     @ManyToOne
     @JoinColumn(name = "chat_id",referencedColumnName = "id")
     private Chat chat_id;
 
     @OneToOne
-    @JoinColumn(name = "role_id",referencedColumnName = "role_id")
+    @JoinColumn(name = "role_id",referencedColumnName = "id")
     private Role role_id;
 
 }

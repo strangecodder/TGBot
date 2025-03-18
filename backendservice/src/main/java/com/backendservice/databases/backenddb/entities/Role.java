@@ -12,7 +12,7 @@ public class Role {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(columnDefinition = "serial")
+    //@Column(columnDefinition = "serial")
     private int id;
 
     @Column(name = "value")
