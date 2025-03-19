@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.List;
 
-@Controller
+@Controller("/api")
 @Slf4j
 @RequestMapping("/api")
 public class HomeController {
@@ -35,11 +35,7 @@ public class HomeController {
 
     @GetMapping("/")
     public String getAllChat(){
-/*        List<State> states = stateRepository.findAll();
-        List<Tag> tags = tagRepository.findAll();*/
-
         chatService.saveExample();
-        //chatService.saveAnother();
         return "OK";
     }
 
@@ -50,8 +46,5 @@ public class HomeController {
     }
 
 
-/*    @GetMapping("/home")
-    public String home(){
-        return "OK";
-    }*/
+
 }
