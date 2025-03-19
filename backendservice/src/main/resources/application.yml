@@ -2,7 +2,7 @@ spring:
   application:
     name: backendservice
   kafka:
-    bootstrap-servers: 9092
+    bootstrap-servers: INSIDE://localhost:9092
   server:
     port: 8080
 com:
