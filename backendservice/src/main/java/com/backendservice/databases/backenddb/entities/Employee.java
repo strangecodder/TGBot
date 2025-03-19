@@ -12,11 +12,10 @@ public class Employee {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    //@Column(columnDefinition = "serial")
-    private int id;
+    private long id;
 
-    @Column(name = "tg_id")
-    private long tg_id;
+/*    @Column(name = "TgId")
+    private long TgId;*/
 
     @Column(name = "firstname")
     private String firstname;

@@ -13,9 +13,9 @@ import java.sql.Timestamp;
 public class UserAction {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(columnDefinition = "serial")
-    private int id;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name="id", insertable = false, updatable = false, nullable = false)
+    private long id;
 
     @Column(name = "type")
     private String type;
