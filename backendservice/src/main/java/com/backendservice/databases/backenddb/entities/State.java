@@ -15,8 +15,6 @@ import lombok.Setter;
 public class State {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    //@Column(columnDefinition = "serial")
     private Integer id;
 
     @Column(name = "value")
