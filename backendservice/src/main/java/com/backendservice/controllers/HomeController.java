@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.List;
 
-@Controller("/api")
+@Controller()
 @Slf4j
 @RequestMapping("/api")
 public class HomeController {
