@@ -1,4 +1,4 @@
-package com.backendservice.databases.BackendDB.Entities;
+package com.backendservice.databases.backenddb.entities;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -11,15 +11,15 @@ import lombok.NoArgsConstructor;
 public class Chat {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(columnDefinition = "serial")
-    private int id;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name="id", insertable = false, updatable = false, nullable = false)
+    private long id;
 
     @Column(name = "chat_name")
     private String chat_name;
 
-    @Column(name = "chat_link")
-    private String chat_link;
+    @Column(name = "link")
+    private String link;
 
     @OneToOne
     @JoinColumn(name = "department_id",referencedColumnName = "id")

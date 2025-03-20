@@ -1,4 +1,4 @@
-package com.backendservice.databases.LogDB.Entities;
+package com.backendservice.databases.logdb.entities;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -13,9 +13,9 @@ import java.sql.Timestamp;
 public class MessageLog {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(columnDefinition = "serial")
-    private int id;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name="id", insertable = false, updatable = false, nullable = false)
+    private long id;
 
     @OneToOne
     @JoinColumn(name = "base_id",referencedColumnName = "id")

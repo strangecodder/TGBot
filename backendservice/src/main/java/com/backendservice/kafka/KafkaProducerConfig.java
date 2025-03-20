@@ -1,5 +1,6 @@
 package com.backendservice.kafka;
 
+import com.fasterxml.jackson.databind.JsonSerializable;
 import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.common.serialization.StringSerializer;
 import org.springframework.beans.factory.annotation.Value;
@@ -31,7 +32,7 @@ public class KafkaProducerConfig {
         );
         configProps.put(
                 ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG,
-                StringSerializer.class
+                JsonSerializable.class
         );
         return new DefaultKafkaProducerFactory<>(configProps);
     }

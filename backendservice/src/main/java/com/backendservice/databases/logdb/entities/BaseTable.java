@@ -1,4 +1,4 @@
-package com.backendservice.databases.LogDB.Entities;
+package com.backendservice.databases.logdb.entities;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -11,16 +11,11 @@ import lombok.NoArgsConstructor;
 public class BaseTable {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(columnDefinition = "serial")
-    private int id;
+    private long id;
 
     @Column(name = "tg_id")
-    private int tg_id;
+    private long tg_id;
 
     @Column(name = "chat_id")
     private int chat_id;
-
-    @Column(name = "chat_role")
-    private int chat_role;
 }

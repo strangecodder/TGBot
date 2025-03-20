@@ -1,30 +1,30 @@
-package com.backendservice.databases.BackendDB.Entities;
+package com.backendservice.databases.backenddb.entities;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name = "chat_group")
+@Table(name = "user_chat")
 @AllArgsConstructor
 @NoArgsConstructor
-public class ChatGroup {
+public class UserChat {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(columnDefinition = "serial")
-    private int id;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name="id", insertable = false, updatable = false, nullable = false)
+    private long id;
 
     @ManyToOne
     @JoinColumn(name = "user_id",referencedColumnName = "id")
-    private User user_id;
+    private Employee employee_id;
 
     @ManyToOne
     @JoinColumn(name = "chat_id",referencedColumnName = "id")
     private Chat chat_id;
 
     @OneToOne
-    @JoinColumn(name = "role_id",referencedColumnName = "role_id")
+    @JoinColumn(name = "role_id",referencedColumnName = "id")
     private Role role_id;
 
 }

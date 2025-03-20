@@ -42,8 +42,8 @@ services:
       PGDATA: /var/lib/postgres/data/pgdata
     ports:
       - "5432:5432"
-#    volumes:
-#      - postgres-data:/var/lib/postgres/data/pgdata
+    volumes:
+      - postgres-data:/var/lib/postgres/data/pgdata
 #      - postgres-data:/var/lib/postgres/data/pgdata
     deploy:
       resources:
@@ -81,8 +81,8 @@ services:
       PGPORT: 5433
     ports:
       - "5433:5433"
-#    volumes:
-#      #- postgres-data:/var/lib/postgres/data/pgdata-logs
+    volumes:
+      - postgres-data:/var/lib/postgres/data/pgdata-logs
 #      - postgres-data:/var/lib/postgres/data/pgdata-logs
     deploy:
       resources:
@@ -109,3 +109,8 @@ services:
     tty: true
     stdin_open: true
 
+volumes:
+  postgres-data:
+    driver: local
+  pgadmin-data:
+    driver: local

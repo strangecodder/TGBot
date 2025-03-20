@@ -1,31 +1,27 @@
-package com.backendservice.databases.BackendDB.Entities;
+package com.backendservice.databases.backenddb.entities;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name = "user")
+@Table(name = "employee")
 @AllArgsConstructor
 @NoArgsConstructor
-public class User {
+public class Employee {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(columnDefinition = "serial")
-    private int id;
+    private long id;
 
-    @Column(name = "Tg_id")
-    private int Tg_id;
+/*    @Column(name = "TgId")
+    private long TgId;*/
 
-    @Column(name = "email")
-    private String email;
+    @Column(name = "firstname")
+    private String firstname;
 
-    @Column(name = "first_name")
-    private String first_name;
-
-    @Column(name = "last_name")
-    private String last_name;
+    @Column(name = "lastname")
+    private String lastname;
 
     @OneToOne
     @JoinColumn(name = "department_id",referencedColumnName = "id")
@@ -34,4 +30,7 @@ public class User {
     @OneToOne
     @JoinColumn(name = "state_id",referencedColumnName = "id")
     private State state_id;
+
+    @Column(name = "email")
+    private String email;
 }
