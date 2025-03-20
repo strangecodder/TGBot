@@ -1,4 +1,4 @@
-package com.backendservice.kafka;
+package com.botservice.kafka.producer;
 
 import com.fasterxml.jackson.databind.JsonSerializable;
 import org.apache.kafka.clients.producer.ProducerConfig;
