@@ -1,4 +1,4 @@
-package com.botservice.kafka;
+package com.botservice.kafka.consumer;
 
 import com.fasterxml.jackson.databind.JsonDeserializer;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
