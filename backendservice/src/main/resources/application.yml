@@ -2,25 +2,17 @@ spring:
   application:
     name: backendservice
   kafka:
-    bootstrap-servers: INSIDE://localhost:9092
-  server:
-    port: 8080
+    bootstrap-servers: localhost:9092
 com:
   backendservice:
-      backenddb:
-        url: jdbc:postgresql://localhost:5432/backenddb
-        username: user
-        password: password
-        #class-driver: org.postgresql.Driver
-        #driver-class-name: org.postgresql.Driver
-        #class-driver: org.postgresql.Driver
-        class-driver: org.postgresql.Driver
-      logdb:
-        #driver-class-name: org.postgresql.Driver
-        url: jdbc:postgresql://localhost:5433/logdb
-        username: user
-        password: password
-        #class-driver: org.postgresql.Driver
-        #class-driver: org.postgresql.Driver
-        class-driver: org.postgresql.Driver
+    backenddb:
+      url: jdbc:postgresql://localhost:5432/backenddb
+      username: user
+      password: password
+      class-driver: org.postgresql.Driver
+    logdb:
+      url: jdbc:postgresql://localhost:5433/logdb
+      username: user
+      password: password
+      class-driver: org.postgresql.Driver
 
