@@ -8,7 +8,7 @@ import org.springframework.kafka.annotation.KafkaListener;
 @Slf4j
 public class KafkaListenerBot {
 
-    @KafkaListener(topics = "topic-1", groupId = "group1")
+    @KafkaListener(topics = "topic1", groupId = "group1")
     void listener(String data){
         log.info("Received message [{}] in group1",data);
     }

@@ -2,15 +2,11 @@ spring:
   application:
     name: botservice
   kafka:
-    bootstrap-servers: 9092
-  datasource:
-    url: jdbc:postgresql///localhost:5432/backenddb
-    username: user
-    password: password
+    bootstrap-servers: localhost:9092
   server:
     port: 8081
 
 
-  telegram:
-    token: 7940276562:AAEVnwlS_xEhNEnFZHt04c_b2-vkYu8bFig
-    name: BotTesting
+bot:
+  token: 7940276562:AAEVnwlS_xEhNEnFZHt04c_b2-vkYu8bFig
+  name: "TestTestingTastyBot"

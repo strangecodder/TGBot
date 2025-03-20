@@ -9,6 +9,7 @@ import com.backendservice.databases.logdb.entities.Tag;
 import com.backendservice.databases.logdb.repositories.BaseTableRepository;
 import com.backendservice.databases.logdb.repositories.TagRepository;
 import com.backendservice.services.ChatService;
+import com.backendservice.services.KafkaService;
 import com.backendservice.services.UserService;
 import lombok.Getter;
 import lombok.extern.slf4j.Slf4j;
@@ -31,6 +32,9 @@ public class HomeController {
     private ChatService chatService;
 
     @Autowired
+    private KafkaService kafkaService;
+
+    @Autowired
     private BaseTableRepository baseTableRepository;
 
     @GetMapping("/")
@@ -45,6 +49,11 @@ public class HomeController {
         return "ok";
     }
 
+    @GetMapping("/kakfka")
+    public String l(){
+        kafkaService.sendMessage("Hello, Spring fucker");
+        return "ok";
+    }
 
 
 }

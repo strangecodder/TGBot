@@ -19,6 +19,7 @@ public class BotInit {
     @Autowired
     public BotInit(TelegramBot telegramBot) {
         this.telegramBot = telegramBot;
+
     }
 
     @EventListener({ContextRefreshedEvent.class})

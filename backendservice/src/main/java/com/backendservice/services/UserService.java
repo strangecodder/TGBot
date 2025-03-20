@@ -37,9 +37,9 @@ public class UserService {
     }*/
 
     public ResponseEntity<Employee> getEmployeeByTgId(long tgId){
-        if(!employeeRepository.existsByTg_id()){
+        if(!employeeRepository.existsById(tgId)){
             return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
         }
-        return new ResponseEntity<>(employeeRepository.findEmployeeByTg_id(),HttpStatus.OK);
+        return new ResponseEntity<>(employeeRepository.findEmployeeById(tgId),HttpStatus.OK);
     }
 }
