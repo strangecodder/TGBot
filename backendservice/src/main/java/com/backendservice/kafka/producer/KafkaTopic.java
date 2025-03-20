@@ -1,4 +1,4 @@
-package com.backendservice.kafka;
+package com.backendservice.kafka.producer;
 
 import org.apache.kafka.clients.admin.NewTopic;
 import org.springframework.context.annotation.Bean;
@@ -10,11 +10,11 @@ public class KafkaTopic {
 
     @Bean
     public NewTopic topic1(){
-        return TopicBuilder.name("topic1").build();
+        return TopicBuilder.name("back-to-bot").build();
     }
 
     @Bean
     public NewTopic topic2(){
-        return TopicBuilder.name("topic2").partitions(3).build();
+        return TopicBuilder.name("bot-to-back").partitions(3).build();
     }
 }
