@@ -21,7 +21,7 @@ public class KafkaConsumer {
     private String bootstrapServers;
 
     @Bean
-    public ConsumerFactory<String,String> consumerFactory(){
+    public ConsumerFactory<String,Object> consumerFactory(){
         Map<String,Object> props = new HashMap<>();
         props.put(
                 ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG,
